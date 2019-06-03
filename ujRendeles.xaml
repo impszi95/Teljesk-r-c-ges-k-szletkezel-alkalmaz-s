@@ -1,0 +1,186 @@
+﻿<Window x:Class="zakopane.ujRendeles"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zakopane"
+        mc:Ignorable="d"
+        Title="ujRendeles" Height="690 
+        
+        " Icon="logoIcon.png" Width="933.2" Background="#FF2F2F2F" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,3.4,0">
+        <DataGrid x:Name="dataGrid" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding termeklist}" HorizontalAlignment="Left" Height="350" Margin="10,10,0,0" VerticalAlignment="Top" Width="882" Background="#FFA3A3A3" FontSize="18" AlternatingRowBackground="#FFDADADA" SelectionChanged="dataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="id" Binding="{Binding TermekID}" >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="Padding" Value="3"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Padding" Value="3"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Magyar név" Binding="{Binding TermekNameHUN}" >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment"
+                 Value="Center" />
+                            <Setter Property="Padding" Value="3"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Padding" Value="3"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Súly" Binding="{Binding SulyM}" >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment"
+                                    
+                 Value="Center" />
+                            <Setter Property="Padding" Value="3"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Padding" Value="3"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Beszerzési ár" Binding="{Binding Ar_BeszerzesiM}" >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment"
+                 Value="Center" />
+                            <Setter Property="Padding" Value="3"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Padding" Value="3"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Eladási ár" Binding="{Binding Ar_EladasiM}" >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment"
+                 Value="Center" />
+                            <Setter Property="Padding" Value="3"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Padding" Value="3"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Készlet #" Binding="{Binding Raktar_dbM}" >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment"
+                 Value="Center" />
+                            <Setter Property="Padding" Value="3"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Padding" Value="3"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Készlet db" Binding="{Binding DbMEGJ}" >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment"
+                 Value="Center" />
+                            <Setter Property="Padding" Value="5"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Padding" Value="5"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Címke db"  Binding="{Binding Cimke_dbM}" >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment"
+                 Value="Center" />
+                            <Setter Property="Padding" Value="3"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Padding" Value="3"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Gyártó" Binding="{Binding Company}" >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment"
+                 Value="Center" />
+                            <Setter Property="Padding" Value="3"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Padding" Value="3"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="29" Margin="436,383,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="45" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="button1" Content="Hozzáad" HorizontalAlignment="Left" Margin="498,381,0,0" VerticalAlignment="Top" Width="85" Click="button1_Click" Height="33" FontWeight="Bold" FontSize="18"/>
+        <ListBox x:Name="listBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Left" Height="223" Margin="325,425,0,0" VerticalAlignment="Top" Width="384" Background="#FFD1D1D1" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="done_button" Content="Kész" HorizontalAlignment="Left" Margin="754,592,0,0" VerticalAlignment="Top" Width="129" Height="45" Click="done_button_Click" RenderTransformOrigin="0.5,0.5" FontSize="22" FontWeight="Bold">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.764"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.387"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label x:Name="label" Content="Összeg:" HorizontalAlignment="Left" Margin="746,483,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+        <Label x:Name="osszeg_label" Content="0 Ft" HorizontalAlignment="Left" Margin="741,514,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="label1" Content="EUR :" HorizontalAlignment="Left" Margin="731,422,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="eur_textbox" Text="{Binding Eur}"  HorizontalAlignment="Left" Height="30" Margin="791,424,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" Background="#FFE5E5E5" SpellCheck.IsEnabled="True" FontSize="20" FontWeight="Bold"/>
+        <Image x:Name="product_image"  HorizontalAlignment="Left" Height="231" Margin="27,417,0,0" VerticalAlignment="Top" Width="278"/>
+        <Button x:Name="kivesz_button" Content="Kivesz" HorizontalAlignment="Left" Margin="604,379,0,0" VerticalAlignment="Top" Width="85" Click="kivesz_button_Click" Height="33" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="productLabel" HorizontalAlignment="Center" FontSize="20" Foreground="White" Content="" Margin="-565,145,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
+        <Label x:Name="label1_Copy" Content="PLN :" HorizontalAlignment="Left" Margin="731,383,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="pln_textbox_Copy" Text="{Binding Pln}"  HorizontalAlignment="Left" Height="30" Margin="791,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" Background="#FFE5E5E5" SpellCheck.IsEnabled="True" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="label2_Copy" Content=". -al" HorizontalAlignment="Left" Margin="849,400,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White"/>
+
+    </Grid>
+</Window>

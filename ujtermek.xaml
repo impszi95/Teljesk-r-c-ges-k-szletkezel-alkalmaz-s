@@ -1,0 +1,37 @@
+﻿<Window x:Class="zakopane.ujtermek"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zakopane"
+        mc:Ignorable="d"
+        Title="új termék
+" Height="380
+        
+        " Width="400
+        
+        " Icon="logoIcon.png" WindowStartupLocation="CenterScreen" >
+    <Grid>
+
+        <Label x:Name="label" Content="Új termék" HorizontalAlignment="Left" Margin="135,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+        <TextBox x:Name="cimke_db_textbox" Text="{Binding Cimke_db}" HorizontalAlignment="Left" Height="23" Margin="122,227,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="karton_db_textbox" HorizontalAlignment="Left" Height="23" Margin="122,199,0,0" TextWrapping="Wrap" Text="{Binding Karton_darab}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Ar_Eladasi_textbox" HorizontalAlignment="Left" Height="23" Margin="122,171,0,0" TextWrapping="Wrap" Text="{Binding Ar_Eladasi}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Ar_Beszerzesi_textbox" HorizontalAlignment="Left" Height="23" Margin="122,143,0,0" TextWrapping="Wrap" Text="{Binding Ar_Beszerzesi}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="suly_textbox" HorizontalAlignment="Left" Height="23" Margin="122,115,0,0" TextWrapping="Wrap" Text="{Binding Suly}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="termekNamePL_textbox" HorizontalAlignment="Left" Height="23" Margin="122,87,0,0" TextWrapping="Wrap" Text="{Binding TermekNamePL}" VerticalAlignment="Top" Width="158"/>
+        <TextBox x:Name="termekNameHUN_textbox" HorizontalAlignment="Left" Height="23" Margin="122,59,0,0" TextWrapping="Wrap" Text="{Binding TermekNameHUN}" VerticalAlignment="Top" Width="158"/>
+        <Label x:Name="label1_Copy" Content="Termék neve HUN" HorizontalAlignment="Left" Margin="11,59,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy1" Content="Termék neve PL" HorizontalAlignment="Left" Margin="24,87,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy2" Content="Súly" HorizontalAlignment="Left" Margin="85,115,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy3" Content="Beszerzési ár" HorizontalAlignment="Left" Margin="40,143,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy4" Content="Eladási ár" HorizontalAlignment="Left" Margin="58,169,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy5" Content="Db/karton" HorizontalAlignment="Left" Margin="56,200,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy6" Content="Címke db" HorizontalAlignment="Left" Margin="56,226,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="save_button" Content="Mentés" HorizontalAlignment="Left" Margin="279,137,0,0" VerticalAlignment="Top" Width="75" Click="save_button_Click" Height="36" FontSize="16"/>
+        <Button x:Name="picture_button" Content="Termékkép" HorizontalAlignment="Left" Margin="121,294,0,0" VerticalAlignment="Top" Width="120" Height="33" Click="picture_button_Click"/>
+        <Image x:Name="image"  HorizontalAlignment="Left" Height="115" Margin="247,178,0,0" VerticalAlignment="Top" Width="137"/>
+        <ComboBox x:Name="comboBox" SelectedItem="{Binding Company}" HorizontalAlignment="Left" Margin="122,255,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
